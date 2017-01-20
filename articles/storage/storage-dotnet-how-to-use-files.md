@@ -642,8 +642,11 @@ Also, you can refer to [Azure Files Troubleshooting Article](storage-troubleshoo
     IBM has released a document to guide IBM MQ customers when configuring Azure File Storage with their service. For more information, please check out [How to setup IBM MQ Multi instance queue manager with Microsoft Azure File Service](https://github.com/ibm-messaging/mq-azure/wiki/How-to-setup-IBM-MQ-Multi-instance-queue-manager-with-Microsoft-Azure-File-Service).
 15. **How do I troubleshoot Azure File Storage errors?**
     
-    You can refer to [Azure Files Troubleshooting Article](storage-troubleshoot-file-connection-problems.md) for end-to-end troubleshooting guidance.               
+    You can refer to [Azure Files Troubleshooting Article](storage-troubleshoot-file-connection-problems.md) for end-to-end troubleshooting guidance.  
+    
+16. **Can I use FileSystemWatcher to listen to events such as the creation/modification/deletion of files and directories in my Azure File Service share?
 
+    Unlike blob and queue storage, there are no out of the box triggers available to listen to Azure file storage. It is easy to achieve it using Azure web jobs SDK. you can write your own triggered or non triggered bindings and listen to the events in your file storage. You can find details to get started here - [Guideline for authoring new triggers and binders](https://github.com/Azure/azure-webjobs-sdk-extensions/wiki/Binding-Extensions-Overview).
 ## Next steps
 See these links for more information about Azure File storage.
 
