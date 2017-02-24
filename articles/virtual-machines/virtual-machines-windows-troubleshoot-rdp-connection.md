@@ -203,8 +203,7 @@ After each troubleshooting step, try reconnecting to the VM.
    
     Select your VM in the Azure portal. Click the **...More** button, then click **Reset Remote Access**:
    
-    ![Reset the RDP configuration in the Azure portal](./media/virtual-machines-windows-troubleshoot-rdp-connection/classic-reset-rdp.png)
-2. **Verify Cloud Services endpoints**. This troubleshooting step verifies that you have endpoints in your Cloud Services to permit RDP traffic. The default port for RDP is TCP port 3389. A rule to permit RDP traffic may not be created automatically when you create your VM.
+    ![Reset the RDP configuration in the Azure portal](./media/virtual-machines-windows-troubleshoot-rdp-connection/classic-reset-rdp.png)s to permit RDP traffic. The default port for RDP is TCP port 3389. A rule to permit RDP traffic may not be created automatically when you create your VM.
    
    Select your VM in the Azure portal. Click the **Endpoints** button to view the endpoints currently configured for your VM. Verify that endpoints exist that allow RDP traffic on TCP port 3389.
    
@@ -245,8 +244,7 @@ You may encounter a specific error message when trying to connect to your VM via
 
 ## Additional resources
 If none of these errors occurred and you still can't connect to the VM via Remote Desktop, read the detailed [troubleshooting guide for Remote Desktop](virtual-machines-windows-detailed-troubleshoot-rdp.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
-
-* [Azure IaaS (Windows) diagnostics package](https://home.diagnostics.support.microsoft.com/SelfHelp?knowledgebaseArticleFilter=2976864)
+2. **Verify Cloud Services endpoints**. This troubleshooting step verifies that you have endpoints in your Cloud Service
 * For troubleshooting steps in accessing applications running on a VM, see [Troubleshoot access to an application running on an Azure VM](virtual-machines-linux-troubleshoot-app-connection.md?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * If you are having issues using Secure Shell (SSH) to connect to a Linux VM in Azure, see [Troubleshoot SSH connections to a Linux VM in Azure](virtual-machines-linux-troubleshoot-ssh-connection.md?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 
