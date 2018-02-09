@@ -42,7 +42,8 @@ The sample steps below expect a simple environment already created. If you want 
 
 ## How to create a VM for testing static private IP addresses
 You cannot set a static private IP address during the creation of a VM in the Resource Manager deployment mode by using the Azure portal. You must create the VM first, tehn set its private IP to be static.
-
+## How to add a static private IP address to an existing VM
+Network connection properties, such as DNS server IP addresses, should not be edited directly within Windows VMs as they may get erased during service heal, when the virtual network adaptor gets replaced, and cause VM connectivity/RDP issues. To add a static private IP address to the VM created using the steps above, follow the steps below:
 To create a VM named *DNS01* in the *FrontEnd* subnet of a VNet named *TestVNet*, follow the steps below.
 
 1. From a browser, navigate to http://portal.azure.com and, if necessary, sign in with your Azure account.
@@ -81,7 +82,7 @@ To view the static private IP address information for the VM created with the st
     ![Deploying VM tile](./media/virtual-networks-static-ip-arm-pportal/figure08.png)
 
 ## How to add a static private IP address to an existing VM
-To add a static private IP address to the VM created using the steps above, follow the steps below:
+Network connection properties, such as DNS server IP addresses, should not be edited directly within Windows VMs as they may get erased during service heal, when the virtual network adaptor gets replaced, and cause VM connectivity/RDP issues. To add a static private IP address to the VM created using the steps above, follow the steps below:
 
 1. From the **IP addresses** blade shown above, click **Static** under **Assignment**.
 2. Type *192.168.1.101* for **IP address**, and then click **Save**.
@@ -94,7 +95,7 @@ To add a static private IP address to the VM created using the steps above, foll
 > 
 
 ## How to remove a static private IP address from a VM
-To remove the static private IP address from the VM created above, complete the following step:
+To remove the static private IP address from the VM created above, complete the following step.
 
 From the **IP addresses** blade shown above, click **Dynamic** under **Assignment**, and then click **Save**.
 
